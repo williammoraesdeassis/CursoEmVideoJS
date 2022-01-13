@@ -1,0 +1,1 @@
+Este é um curso introdutório de JavaScript realizado no Curso em Video com apoio do Google
