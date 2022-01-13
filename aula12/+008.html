@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERMANOTEU</title>
+</head>
+<body>
+    <div id="head1">
+        <h1>HERMANOTEU MINHAS ROUPAS NO VARAL</h1>
+        <h2>será que eu recolho as minhas roupas do varal?</h2>
+    </div>
+    <div id="question">
+        Quantas peças de roupa tem no varal:<input type="number" name="txtrop" id="txtrop"><br>
+         De 0 (ruim) a 10 (ótimo) como está o clima:<input type="number" name="txtclima" id="txtclima">
+        <input type="button" value="????" name="btt" id="btt" onclick="eita()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function eita(){
+            var txtrop = window.document.querySelector('input#txtrop')
+            var roupas = Number(txtrop.value)
+            var txtclima = window.document.querySelector('input#txtrop')
+            var clima = Number(txtrop.value)
+            var res = window.document.querySelector('div#res')
+
+            if(clima < 1 && roupas < 3 ){
+                res.innerHTML = `Relaxa, agora essas horas já tá chovendo e você tinha pouca roupa pra recolher!`
+            } else if(clima > 5 ){
+                res.innerHTML = `O clima ainda está bom, Relaxa`
+            } else if(clima < 5 && roupas > 5 ){
+                res.innerHTML = `Corre KRL, vai chover e tem muita roupa no varal Mlk `
+            } else{
+                res.innerHTML = `FODASE AS SUAS ROUPAS`
+            }
+            
+        }
+    </script>
+</body>
+</html>

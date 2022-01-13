@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IMC</title>
+    <style>
+        body{
+            font:normal 15pt Arial;
+        }
+        input#btt{
+
+            position: absolute;
+            width: 183px;
+            top: 225px;
+            left: 10px;
+        }
+        p{
+            line-height: 0px
+        }
+        div#res{
+            background-color: #000000;
+            color: blanchedalmond;
+            width: 183px;
+            height: 40px;
+            position: absolute;
+            top: 300px;
+            left: 10px;
+            text-align: center;
+            line-height: 40px;
+    
+        }
+        h1{
+            background-color: black;
+            color: white;
+        }
+        h3{
+            position: absolute;
+            top: 248px;
+            left: 10px;
+            background-color: #000000;
+            color: white;
+            width: 183px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcule o seu IMC</h1>
+    <p>Peso</p>
+    <input type="number" name="txpeso" id="txpeso"> Kg
+    <p>Altura</p>
+    <input type="number" name="txaltura" id="txaltura"> cm
+    <input type="button" value="Calcular" onclick="imc()" id="btt">
+    <h3> O seu IMC é</h3>
+    <div id="res" > </div>
+    <script>
+        function imc() {
+            var txpeso = window.document.querySelector('input#txpeso')
+            var txaltura = window.document.querySelector('input#txaltura')
+            var res = window.document.querySelector('div#res')
+            var peso = Number(txpeso.value)
+            var altura = (Number(txaltura.value))/100 
+            var s = peso / altura ** 2
+            res.innerHTML = s.toFixed(2)
+        }
+    </script>
+</body>
+</html>

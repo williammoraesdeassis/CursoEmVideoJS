@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE - vota ou não</title>
+</head>
+<body>
+    <div id="head1">
+        <h1>TSE</h1>
+        <p>faça a sua parte como cidadão brasileiro!</p>
+    </div>
+    <div id="area">
+        Qual é a sua idade:<input type="number" name="idade" id="idade">
+        <input type="button" value="POSSO VOTAR" name="btt" id="btt" onclick="tse()">
+    </div>
+    <div id="res">
+        
+    </div>
+    <script>
+        function tse(){
+            var txtidade = window.document.querySelector('input#idade')
+            var idade = Number(txtidade.value)
+            var res = window.document.querySelector('div#res')
+            if(idade < 16  ){
+                res.innerHTML = `Você tem ${idade}anos, não pode votar, espere até os 16 para fazer a sua parte!`
+            } else if(idade < 18 || idade > 65 ){
+                res.innerHTML = `Você tem ${idade}anos, o seu voto é opcional!`
+            } else{
+                res.innerHTML = `Você tem ${idade} anos, o seu voto é obrigatório!!! Faça a sua parte.`
+            }
+        }
+    </script>
+</body>
+</html>

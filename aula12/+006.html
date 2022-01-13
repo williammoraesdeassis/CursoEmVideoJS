@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beto carreiro</title>
+</head>
+<body>
+    <div id="head1">
+        <h1>BETO CARREIRO WORLD</h1>
+        <h2>A melhor montanha RUSSA do BRASIL!!!</h2>
+    </div>
+    <div id="question">
+        Qual é a sua altura em cm:<input type="number" name="txtalt" id="txtalt">
+        <input type="button" value="POSSO USAR A MONTANHA RUSSA???" name="btt" id="btt" onclick="teste()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function teste(){
+            var txtalt = window.document.querySelector('input#txtalt')
+            var altura = Number(txtalt.value)
+            var res = window.document.querySelector('div#res')
+            if(altura < 150 || altura > 200 ){
+                res.innerHTML = `Com ${altura}cm você pode sofrer um acidente!`
+            } else {
+                res.innerHTML = `Com ${altura}cm você pode andar tranquilamente na MONTANHA RUSSA BCW!!!! Aproveite:)`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(22, 25, 26);
+            color: rgb(213, 221, 221);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM!</h1>
+    <p> É um bom dia para começar a programar</p>
+    <p>Venha fazer parte do nosso time</p>
+    <button><div class="myClass">Click <strong> AQUI</strong></div></button>
+    
+    <script>
+        var a = window.document.getElementsByClassName("myClass")[0]
+        a.style.color = 'green'
+        
+    </script>
+</body>
+</html>

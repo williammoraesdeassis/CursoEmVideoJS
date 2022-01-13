@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nescafé</title>
+</head>
+<body>
+    <div id="head1">
+        <h1>Nescafé</h1>
+        <h2>Trazendo o melhor da terra para perfumar o seu local com on cheirinho de minhas!!!</h2>
+        <p>Nescafé MINAS</p>
+    </div>
+    <div id="question">
+        Quantas colheres de café:<input type="number" name="txtcol" id="txtcol">
+        <input type="button" value="QUERO CAFÉÉÉÉÉÉÉ!" name="btt" id="btt" onclick="café()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function café(){
+            var txtcol = window.document.querySelector('input#txtcol')
+            var colheres = Number(txtcol.value)
+            var res = window.document.querySelector('div#res')
+            if(colheres < 1){
+                res.innerHTML = `Isso não faz nada de café meu amigo!`
+            } else if(colheres< 5 ){
+                res.innerHTML = `Com ${colheres} de café você faz um cafézão para a você!!!! Aproveite:)`
+             } else if(colheres< 10 ){
+                res.innerHTML = `Com ${colheres} de café você faz um cafézão para a familia!!!! Aproveite:)`
+            } else if(colheres>= 10 ){
+                res.innerHTML = `Com ${colheres} de café você faz um cafézão para a Empresa toda!!!! BOAAAA:)`
+            }
+        }
+    </script>
+</body>
+</html>

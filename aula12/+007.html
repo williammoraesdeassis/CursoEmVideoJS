@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCT - Brasil</title>
+</head>
+<body>
+    <div id="head1">
+        <h1>CCT Brasil</h1>
+        <h2>Nós cuidamos das estradas para você!</h2>
+    </div>
+    <div id="question">
+        Qual é o tipo do seu veículo:<input type="text" name="txtvei" id="txtvei">
+        <input type="button" value="Calcular TAXA" name="btt" id="btt" onclick="taxa()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function taxa(){
+            var txtvei = window.document.querySelector('input#txtvei')
+            var veiculo = (txtvei.value).toLowerCase()
+            var res = window.document.querySelector('div#res')
+
+            if(veiculo === 'moto' || veiculo === "motocicleta"){
+                res.innerHTML = `Com <strong>${veiculo}</strong> você pode passar sem taxa, Boa viagem!`
+            } else if(veiculo === 'carro') {
+                res.innerHTML = `Com <strong>${veiculo}</strong> você paga <strong>R$ 3,50</strong> de taxa, Boa viagem!`
+            } else if(veiculo === 'caminhonete'){
+                res.innerHTML = `Com <strong>${veiculo}</strong> você paga <strong>R$ 5,50</strong> de taxa, Boa viagem!`
+            } else if(veiculo === 'caminhão'){
+                res.innerHTML = `Com <strong>${veiculo}</strong> você paga <strong>R$ 10,00</strong> de taxa, Boa viagem!`
+            }
+        }
+    </script>
+</body>
+</html>

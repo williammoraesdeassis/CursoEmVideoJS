@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMATO</title>
+</head>
+<body>
+    <div id="head1">
+        <h1>DMATO sucos</h1>
+        <h2>Trazendo o melhor da terra para matar a sua sede!!!</h2>
+        <p> DMATO sucos</p>
+    </div>
+    <div id="question">
+        Quantas laranjas:<input type="number" name="txtlar" id="txtlar">
+        <input type="button" value="QUERO AÊÊ!" name="btt" id="btt" onclick="suco()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function suco(){
+            var txtlar = window.document.querySelector('input#txtlar')
+            var laranjas = Number(txtlar.value)
+            var res = window.document.querySelector('div#res')
+            if(laranjas < 1){
+                res.innerHTML = `Isso não faz nem um copo meu amigo!`
+            } else if(laranjas< 5 ){
+                res.innerHTML = `Com ${laranjas} de café você faz um suco ótimo para a você!!!! Aproveite:)`
+             } else if(laranjas< 10 ){
+                res.innerHTML = `Com ${laranjas} de café você faz um sucão para a familia!!!! Aproveite:)`
+            } else if(laranjas>= 10 ){
+                res.innerHTML = `Com ${laranjas} de café você faz um suco TOP para a FESTA toda!!!! BOAAAA:)`
+            }
+        }
+    </script>
+</body>
+</html>
